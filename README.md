@@ -52,16 +52,18 @@ The objective of the project is to reduce repetitive manual testing effort and i
 
 ## Installation Steps
 
+```bash
 pip install playwright
-
 pip install pytest
-
 playwright install
+```
 
 ## Sample Test Script
 
-test_login.py
+## test_login.py
 
+
+```python
 from playwright.sync_api import sync_playwright
 
 
@@ -79,11 +81,14 @@ def test_login():
         assert "inventory" in page.url
 
         browser.close()
+```
+
 
 ## Sample Search Test
 
-test_search.py
+## test_search.py
 
+```python
 from playwright.sync_api import sync_playwright
 
 
@@ -102,8 +107,28 @@ def test_product_search():
         assert product.is_visible()
 
         browser.close()
+```
 
-## How to Run Tests
 
- pytest
+## Run Tests
+
+```bash
+pytest
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+playwright install
+```
+
+## Commands to Run
+
+```bash
+pip install -r requirements.txt
+playwright install
+pytest
+```
+
 
